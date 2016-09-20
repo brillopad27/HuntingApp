@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Hunting App</string>
+
+    <string name="breeding_grounds">Breeding Grounds</string>
+    <string name="greeting">Hello Hunters!</string>
+    <string name="hunt_tracker">Hunt Tracker</string>
+    <string name="ducks">Ducks</string>
+    <string name="geese">Geese</string>
+    <string name="dnr">DNR</string>
+    <string name="seasons">Seasons</string>
+    <string name="location_question">Where do you want to hunt?</string>
+    <string name="limits">Limits</string>
+    <string name="submit_button">Submit</string>
+    <string name="hunt_question">What do you want to hunt?</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="duck_quantity_text_view">0</string>
+    <string name="submit">Submit</string>
+
+    <string name="red_string">Red</string>
+    <string name="green_string">Green</string>
+    <string name="yellow_string">Yellow</string>
 </resources>
