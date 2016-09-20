@@ -7,11 +7,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int quantity = 0;
+    int quantityDucks = 0;
+    int quantityGeese = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,30 +60,67 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the plus button is clicked.
+     * This method is called when the plus button for ducks is clicked.
      */
-    public void increase(View view) {
-        if (quantity == 6) {
-            Toast.makeText(MainActivity.this, "It is illegal to shoot more than the daily limit", Toast.LENGTH_SHORT).show();
+    public void increaseDucks(View view) {
+        if (quantityDucks == 6) {
+            Toast.makeText(MainActivity.this, getString(R.string.increase_toast_message), Toast.LENGTH_SHORT).show();
             return;
         }
-        quantity = quantity + 1;
-        displayQuantity(quantity);
+        quantityDucks = quantityDucks + 1;
+        displayQuantityDucks(quantityDucks);
     }
 
     /**
-     * This method is called when the minus button is clicked.
+     * This method is called when the minus button for ducks is clicked.
      */
-    public void decrease(View view) {
-        if (quantity == 1) {
-            Toast.makeText(MainActivity.this, "You can't shoot less than 1 duck or goose", Toast.LENGTH_SHORT).show();
+    public void decreaseDucks(View view) {
+        if (quantityDucks == 0) {
+            //decreaseToastMessage(getBaseContext());
+            Toast.makeText(MainActivity.this, getString(R.string.decrease_toast_message), Toast.LENGTH_SHORT).show();
             return;
         }
-        quantity = quantity - 1;
-        displayQuantity(quantity);
+        quantityDucks = quantityDucks - 1;
+        displayQuantityDucks(quantityDucks);
     }
 
-    public void displayQuantity(int quantity) {
+    /**
+     * This method displays the number of ducks taken.
+     */
+    public void displayQuantityDucks(int quantity) {
+        TextView quantityTextView = (TextView) findViewById(R.id.ducks_quantity_text_view);
+        quantityTextView.setText("" + quantityDucks);
+    }
 
+    /**
+     * This method is called when the plus button for geese is clicked.
+     */
+    public void increaseGeese(View view) {
+        if (quantityGeese == 3) {
+            Toast.makeText(MainActivity.this, getString(R.string.increase_toast_message), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        quantityGeese = quantityGeese + 1;
+        displayQuantityGeese(quantityGeese);
+    }
+
+    /**
+     * This method is called when the minus button for geese is clicked.
+     */
+    public void decreaseGeese(View view) {
+        if (quantityGeese == 0) {
+            Toast.makeText(MainActivity.this, getString(R.string.decrease_toast_message), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        quantityGeese = quantityGeese - 1;
+        displayQuantityGeese(quantityGeese);
+    }
+
+    /**
+     * This method displays the number of geese taken.
+     */
+    public void displayQuantityGeese(int quantity) {
+        TextView quantityTextView = (TextView) findViewById(R.id.geese_quantity_text_view);
+        quantityTextView.setText("" + quantityGeese);
     }
 }

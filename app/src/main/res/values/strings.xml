@@ -15,7 +15,10 @@
     <string name="add">+</string>
     <string name="subtract">-</string>
     <string name="duck_quantity_text_view">0</string>
+    <string name="geese_quantity_text_view">0</string>
     <string name="submit">Submit</string>
+    <string name="decrease_toast_message">You can\'t shoot fewer than 0 ducks or geese</string>
+    <string name="increase_toast_message">It is illegal to shoot more than the daily limit</string>
 
     <string name="red_string">Red</string>
     <string name="green_string">Green</string>
