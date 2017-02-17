@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            tools:context="com.example.android.huntingapp.MainActivity">
+            tools:context="com.example.android.huntingapp.MainActivity"
+            android:id="@+id/tracker">
 
             <TextView
                 android:id="@+id/hunt_tracker"
@@ -110,9 +111,60 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/submit" />
+
             </LinearLayout>
 
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/minnesota_links">
+
+        <Button
+            android:text="Minnesota DNR Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/minnesota_dnr_link" />
+
+        <Button
+            android:text="Minnesota Map"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/minnesota_map"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/manitoba_links"
+        android:layout_below="@+id/minnesota_links"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:text="Manitoba DNR Contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/manitoba_dnr"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Manitoba Map"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/manitoba_map"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </RelativeLayout>
